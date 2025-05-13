@@ -584,13 +584,19 @@ https://app.clockify.me/user/settings</v8:content>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>адрес сайта битрикс, например:
-test.bitrix24.ru</v8:content>
+													<v8:content>адрес сайта битрикс, без http(s)
+например: test.bitrix24.ru</v8:content>
 												</v8:item>
 											</ToolTip>
 											<ToolTipRepresentation>Button</ToolTipRepresentation>
 											<PasswordMode>false</PasswordMode>
 											<ClearButton>true</ClearButton>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>адрес bitrix, без http(s)</v8:content>
+												</v8:item>
+											</InputHint>
 											<ContextMenu name="BitrixURLКонтекстноеМеню" id="93"/>
 											<ExtendedTooltip name="BitrixURLРасширеннаяПодсказка" id="94"/>
 										</InputField>
@@ -609,8 +615,17 @@ tasks.task.list</v8:content>
 											<ToolTipRepresentation>Button</ToolTipRepresentation>
 											<PasswordMode>true</PasswordMode>
 											<ClearButton>true</ClearButton>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>/rest/{USER_ID}/{TOKEN}/</v8:content>
+												</v8:item>
+											</InputHint>
 											<ContextMenu name="Bitrix24WebHookКонтекстноеМеню" id="68"/>
 											<ExtendedTooltip name="Bitrix24WebHookРасширеннаяПодсказка" id="69"/>
+											<Events>
+												<Event name="OnChange">Bitrix24WebHookПриИзменении</Event>
+											</Events>
 										</InputField>
 										<UsualGroup name="Группа1" id="90">
 											<Behavior>Usual</Behavior>
