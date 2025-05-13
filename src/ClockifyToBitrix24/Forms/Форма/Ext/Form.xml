@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -39,13 +39,14 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>CommonPicture.МетаданныеЗадачи</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
+						<xr:Abs>Picture.svg</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="СтраницаВремяРасширеннаяПодсказка" id="62"/>
 					<ChildItems>
 						<UsualGroup name="Группа4" id="48">
 							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="49"/>
@@ -103,6 +104,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаФильтровЗатраченноеВремяРасширеннаяПодсказка" id="159"/>
@@ -381,8 +383,8 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>CommonPicture.ВосклицательныйЗнакКрасный</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
+						<xr:Abs>Picture.zip</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="СтраницаОшибкиРасширеннаяПодсказка" id="111"/>
 					<ChildItems>
@@ -455,7 +457,7 @@
 										<xr:Abs>HeaderPicture.png</xr:Abs>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</HeaderPicture>
-									<FooterTextColor>style:ЗапрещенноеПравоДоступаЦвет</FooterTextColor>
+									<FooterTextColor>style:SpecialTextColor</FooterTextColor>
 									<FooterFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
 									<Width>13</Width>
 									<ContextMenu name="ОшибкиЗатраченоеВремяКонтекстноеМеню" id="164"/>
@@ -475,8 +477,8 @@
 									<DataPath>Ошибки.Ошибка</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderPicture>
-										<xr:Ref>CommonPicture.ВосклицательныйЗнакКрасный</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
+										<xr:Abs>HeaderPicture.zip</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</HeaderPicture>
 									<ContextMenu name="ОшибкиОшибкаКонтекстноеМеню" id="135"/>
 									<ExtendedTooltip name="ОшибкиОшибкаРасширеннаяПодсказка" id="136"/>
@@ -502,12 +504,14 @@
 					<ChildItems>
 						<UsualGroup name="Группа8" id="88">
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="89"/>
 							<ChildItems>
 								<UsualGroup name="Группа2" id="140">
 									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="141"/>
@@ -540,6 +544,7 @@
 										</v8:item>
 									</ToolTip>
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="87"/>
@@ -608,6 +613,7 @@ tasks.task.list</v8:content>
 											<ExtendedTooltip name="Bitrix24WebHookРасширеннаяПодсказка" id="69"/>
 										</InputField>
 										<UsualGroup name="Группа1" id="90">
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="91"/>
@@ -1461,7 +1467,7 @@ https://&lt;you bitrix&gt;.bitrix24.ru/company/personal/user/&lt;user id&gt;/</v
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">style:ПравоСозданияФон</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">web:MistyRose</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
